@@ -15,7 +15,7 @@ Janina Bleeck
 
 ## Forschungsfrage
 
-Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die politische Polarisierung?
+_Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die politische Polarisierung?_
 
 
 ## Faktorenraum
