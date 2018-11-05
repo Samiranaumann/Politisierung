@@ -11,7 +11,7 @@ Lena Lange,
 Tanin Sohi,
 Isabelle Kricsfalussy-Hrabar,
 Janina Bleeck
-
+```
 
 ## Forschungsfrage
 
