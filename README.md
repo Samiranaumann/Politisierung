@@ -1,9 +1,9 @@
-## Politisierung
+# Politisierung
 
 In diesem Forschungsprojekt soll es um den möglichen Einfluss der Nutzungshäufigkeit sozialer Netzwerke auf den persönlichen politischen Entwicklungsprozess gehen. 
 
 
-# Teammitglieder
+## Teammitglieder
 
 Nils Rusch 
 Samira Naumann
@@ -13,12 +13,12 @@ Isabelle Kricsfalussy-Hrabar
 Janina Bleeck
 
 
-# Forschungsfrage
+## Forschungsfrage
 
 Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die politische Polarisierung?
 
 
-# Faktorenraum
+## Faktorenraum
 
 ![tooltip](images/Faktorenraum.jpg)
 
