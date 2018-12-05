@@ -34,7 +34,7 @@ _Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die po
 
 Im Sinne des Signifikanztests soll herausgefunden werden, ob die Unterschiede allein auf Zufall beruhen. Dafür nutzen wir, wie alle Sozialforscher, den p-Wert. 
 Das anfänglich festgelegte α-Niveau, meist 0,05=5% wird als Maß für die Ergebnisse genutzt. Folgernd wird bei p < 0.5 die Nullhypothese verworfen. 
-Wenn der p-wert klein genug ist, kann man sagen, dass es mehr als nur ein Zufall ist. Der Schwellenwert ist in unserem Fall, wie üblich, 5%. Wenn also der p-Wert kleiner als 5% ist, könnten wir sagen, dass unser Ergebnis kein Zufall ist. 
+Wenn der p-Wert klein genug ist, kann man sagen, dass es mehr als nur ein Zufall ist. Der Schwellenwert ist in unserem Fall, wie üblich, 5%. Wenn also der p-Wert kleiner als 5% ist, könnten wir sagen, dass unser Ergebnis kein Zufall ist. 
 
 Zusätzliches Material zum weiteren Verständnis des p-Wertes: http://blog.minitab.com/blog/adventures-in-statistics-2/not-all-p-values-are-created-equal
 
