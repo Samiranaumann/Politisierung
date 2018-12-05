@@ -21,7 +21,7 @@ _Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die po
 
 1. Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
 2. Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung beeinflussbarer. 
-3. Facebook-Nutzer die Facebook hauptsächlich als Informationsquelle nutzen sind politisch aktiver, als die Facebook-Nutzer die Facebook zur Unterhaltung und Kontaktpflege nutzen. 
+3. Facebook-Nutzer die Facebook hauptsächlich als Informationsquelle nutzen, sind politisch aktiver, als die Facebook-Nutzer die Facebook zur Unterhaltung und Kontaktpflege nutzen. 
 
 ## Faktorenraum
 
