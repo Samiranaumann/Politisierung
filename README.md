@@ -17,6 +17,11 @@ Janina Bleeck
 
 _Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die politische Polarisierung?_
 
+## Unterschiedshypothesen
+
+1. Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
+2.
+3. 
 
 ## Faktorenraum
 
