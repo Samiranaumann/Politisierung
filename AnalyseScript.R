@@ -83,11 +83,6 @@ raw.short$politischemeinung <- ordered(raw.short$politischemeinung, levels = ska
 raw.short$politischeinhalte <- ordered(raw.short$politischeinhalte, levels = skala.zustimmung)
 raw.short$comments <- ordered(raw.short$comments, levels = skala.zustimmung)
 
-raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
-raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
-raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
-raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
-
 raw.short$postspolitik2
 raw.short$postspolitik1
 raw.short$followpolitik2
@@ -112,6 +107,24 @@ raw.short$fbaktivpassiv <- ordered(raw.short$fbaktivpassiv,
 
 raw.short
 
+library(psych)
 
+schluesselliste <- list(fbpolitik = c("politischinformiert", "politikreaktion", "politischemeinung", "politischeinhalte", "comments"),
+                        fbmeinung = c("fbpolitischethemen", "politischemeinungposts3", "politischemeinungposts2", "politischemeinungposts1"),
+                        fbaktiv = c("fbaktivpassiv"))
 
+scores <- scoreItems(schluesselliste, raw.short, min = 1, max = 6)
 
+scores$alpha
+scores$scores
+
+data <- bind_cols(raw.short, as.tibble(scores$scores))
+
+View(data)
+
+data <- data %>%
+  select(-starts_with("fbpolitik", ignore.case = F)) %>%
+  select(-starts_with("fbmeinung", ignore.case = F)) %>%
+  select(-starts_with("fbaktiv", ignore.case = F))
+
+saveRDS(data, "data/Digitale_Muendigkeit.rds")
