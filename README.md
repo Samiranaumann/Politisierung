@@ -26,7 +26,9 @@ _Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die po
 ## Nullhypothesen
 
 H0: Es gibt keinen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
+
 H0: Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
+
 H0: Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen. 
 
 
