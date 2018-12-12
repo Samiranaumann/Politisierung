@@ -9,7 +9,7 @@ Nils Rusch
 Samira Naumann
 Lena Lange
 Tanin Sohi
-Isabelle Kricsfalussy-Hrabar
+Isabell Kricsfalussy-Hrabar
 Janina Bleeck
 ```
 
@@ -20,8 +20,11 @@ _Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die po
 ## Unterschiedshypothesen
 
 1. Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
+t.test(data$fbnutzen ~ data$gender)  
 2. Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung beeinflussbarer als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
+t.test(data$followpolitik1 ~ data$politischemeinungposts3)
 3. Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind politisch aktiver, als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen. 
+t.test(data$fbwofuer ~ data$followpolitik1)
 
 ## Nullhypothesen
 
