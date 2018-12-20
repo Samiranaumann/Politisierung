@@ -124,4 +124,18 @@ data <- data %>%
 saveRDS(data, "data/Digitale_Muendigkeit.rds")
 
 
+#### Zusammenhangshypothese
 
+1: 
+2:
+2:
+  
+#### Unterschiedshypothese
+1: Es gibt einen Unterschied in Bezug auf die politische Beeinflussung zwischen Menschen,
+die politisch motivierten Seiten auf Facebook folgen und und Menschen, die keinen
+politisch morivierten Seiten folgen.
+
+2:Es gibt einen Unterschied zwischen Männern und Frauen, ob sie auf Facebook Politikern 
+folgen  oder nicht.
+
+3.Männer kommentieren auf Facebook eher politische Beiträge als Frauen.
