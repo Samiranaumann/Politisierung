@@ -136,3 +136,6 @@ als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
 2: Welche User eher Politikern auf Facebook folgen, ist abhängig vom Geschlecht.
 3. Welche User eher politische motivierte Beiträge auf Facebook kommentieren, ist abhängig vom Geschlecht.
 
+df <- hcictools::robot_care 
+jmv::linReg(df, dep = c("robo_bed"), covs = c("kut"), blocks = list("kut"), 
+            r2Adj = T, stdEst = T, anova=T)  
