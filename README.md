@@ -37,7 +37,7 @@ _Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die po
 3. Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, 
  als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
    
- #### Zusammenhangsshypothesen
+ ## Zusammenhangsshypothesen
  1. Ob man sich in seiner politischen Meinung beeinflussen lässt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
  2. Welche User eher Politikern auf Facebook folgen, ist abhängig vom Geschlecht.
  3. Welche User eher politisch motivierte Beiträge auf Facebook kommentieren, ist abhängig vom Geschlecht.
