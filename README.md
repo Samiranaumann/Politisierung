@@ -47,7 +47,10 @@ Folgernd wird bei p < .05 die Nullhypothese verworfen, da es wahrscheinlich ist,
 Wird H0 verworfen, wird die H1 angenommen. 
 Sollte H0 jedoch richtig sein, trifft der p-Wert Aussagen über die Wahrscheinlichkeit der Daten. 
 
-Zusätzliches Material zum weiteren Verständnis des p-Wertes: http://blog.minitab.com/blog/adventures-in-statistics-2/not-all-p-values-are-created-equal
+Zusätzliches Material zum weiteren Verständnis des p-Wertes: 
+http://blog.minitab.com/blog/adventures-in-statistics-2/not-all-p-values-are-created-equal
+https://www.youtube.com/watch?v=gSyGVDMcg-U
+
 
 ## Faktorenraum
 
