@@ -131,11 +131,14 @@ saveRDS(data, "data/Digitale_Muendigkeit.rds")
 2:
   
 #### Unterschiedshypothese
-1: Es gibt einen Unterschied in Bezug auf die politische Beeinflussung zwischen Menschen,
+1: (Es gibt einen Unterschied in Bezug auf die politische Beeinflussung zwischen Menschen,
 die politisch motivierten Seiten auf Facebook folgen und und Menschen, die keinen
-politisch morivierten Seiten folgen.
+politisch morivierten Seiten folgen.)
+- Menschen, die auf Facebook politisch motivierten Seiten folgen, lassen sich in ihrer politischen Meinung eher 
+beeinflussen, als Menschen, die keinen politisch motivierten Seiten folgen.
 
-2:Es gibt einen Unterschied zwischen Männern und Frauen, ob sie auf Facebook Politikern 
-folgen  oder nicht.
+2:(Es gibt einen Unterschied zwischen Männern und Frauen, ob sie auf Facebook Politikern 
+folgen  oder nicht.)
+- Männer folgen auf Facebook eher Politikern als Frauen.
 
 3.Männer kommentieren auf Facebook eher politische Beiträge als Frauen.
