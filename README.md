@@ -38,7 +38,7 @@ Wenn der p-Wert klein genug ist, kann man sagen, dass es mehr als nur ein Zufall
 Zusätzliches Material zum weiteren Verständnis des p-Wertes: http://blog.minitab.com/blog/adventures-in-statistics-2/not-all-p-values-are-created-equal
 
 
-## Überarbeiteter Text zum Umgang mit P-Values
+## Überarbeitete Hinweise zum Umgang mit P-Values
 
 Im Sinne der Überprüfung von Hypothesen mittels Signifikanztest soll herausgefunden werden, wie wahrscheinlich ein Ergebnis ist, wenn H0 stimmt. Dafür nutzen wir, wie alle Sozialforscher, den p-Wert.
 Der p-Wert ist ein Hilfsmittel zur Hypothesentestung und gibt Aufschluss darüber, ob es sich um Zufallsergebnisse handeln könnte.
