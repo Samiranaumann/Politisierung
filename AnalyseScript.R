@@ -124,21 +124,16 @@ data <- data %>%
 saveRDS(data, "data/Digitale_Muendigkeit.rds")
 
 
-#### Zusammenhangshypothese
+#### Unterschiedsshypothesen
 
-1: 
-2:
-2:
+1: Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
+2:Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, 
+als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
+2:Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, 
+als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
   
-#### Unterschiedshypothese
-1: (Es gibt einen Unterschied in Bezug auf die politische Beeinflussung zwischen Menschen,
-die politisch motivierten Seiten auf Facebook folgen und und Menschen, die keinen
-politisch morivierten Seiten folgen.)
-- Menschen, die auf Facebook politisch motivierten Seiten folgen, lassen sich in ihrer politischen Meinung eher 
-beeinflussen, als Menschen, die keinen politisch motivierten Seiten folgen.
+#### Zusammenhangsshypothesen
+1: Ob man sich in seiner politischen Meinung beeinflussen lässt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
+2: Welche User eher Politikern auf Facebook folgen, ist abhängig vom Geschlecht.
+3. Welche User eher politische motivierte Beiträge auf Facebook kommentieren, ist abhängig vom Geschlecht.
 
-2:(Es gibt einen Unterschied zwischen Männern und Frauen, ob sie auf Facebook Politikern 
-folgen  oder nicht.)
-- Männer folgen auf Facebook eher Politikern als Frauen.
-
-3.Männer kommentieren auf Facebook eher politische Beiträge als Frauen.
