@@ -125,7 +125,6 @@ saveRDS(data, "data/Digitale_Muendigkeit.rds")
 
 
 #### Unterschiedsshypothesen
-
 1: Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
 2:Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, 
 als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
