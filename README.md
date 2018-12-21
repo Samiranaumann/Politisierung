@@ -29,6 +29,19 @@ _Welchen Einfluss hat die Nutzungshäufigkeit von sozialen Netzwerken auf die po
 2. Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
 3. Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen. 
 
+
+## Unterschiedshypothesen bearbeitet und aktuell
+
+1. Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
+2. Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen. 
+3. Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, 
+ als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
+   
+ #### Zusammenhangsshypothesen
+ 1. Ob man sich in seiner politischen Meinung beeinflussen lässt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
+ 2. Welche User eher Politikern auf Facebook folgen, ist abhängig vom Geschlecht.
+ 3. Welche User eher politisch motivierte Beiträge auf Facebook kommentieren, ist abhängig vom Geschlecht.
+
 ## Hinweise zum Umgang mit P-Values
 
 Im Sinne des Signifikanztests soll herausgefunden werden, ob die Unterschiede allein auf Zufall beruhen. Dafür nutzen wir, wie alle Sozialforscher, den p-Wert. 
