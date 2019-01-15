@@ -69,10 +69,14 @@ https://www.youtube.com/watch?v=gSyGVDMcg-U
 
 Tipp: Solche Aufzählungen immer auskommentieren, sonst weiß R damit nichts anzufangen.
 Unterschiedshypothese 1 ist unglücklich formuliert. Es geht um den Unterschied IN der Nutzungshäufigkeit.
+
 In Unterschiedshypothese 3 wirkt der Unterschied zwischen den Gruppen etwas willkürlich und nicht sehr trennscharf.
 Zusammenhangshypothesen:
+
 ad 1: Hier geht etwas unter, dass sie die Beeinflussbarkeit nicht messen können. Sie messen die selbst empfundene Beinflussbarkeit.
+
 ad 2 und 3: Hier ist ein richtig fetter Fehler drin: Geschlecht ist keine ordinale Variable, d.h. wenn überhaupt können Sie das mit Unterschiedshypothesen überprüfen.
+
 Die Formulierung mit "Welche" ist auch ein bisschen irreführend.
 
 
