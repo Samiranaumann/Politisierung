@@ -64,7 +64,8 @@ https://www.youtube.com/watch?v=gSyGVDMcg-U
 ![tooltip](images/Faktorenraum.jpg)
 
 
-##Feedback zu Unterschieds- und Zusammenhangshypothesen
+
+## Feedback zu Unterschieds- und Zusammenhangshypothesen
 
 Tipp: Solche Aufzählungen immer auskommentieren, sonst weiß R damit nichts anzufangen.
 Unterschiedshypothese 1 ist unglücklich formuliert. Es geht um den Unterschied IN der Nutzungshäufigkeit.
@@ -76,9 +77,9 @@ Die Formulierung mit "Welche" ist auch ein bisschen irreführend.
 
 
 ## Unterschiedsshypothesen überarbeitet
-#1: Es gibt einen Unterschied in der Nutzungshäufigkeit sozialer Netzwerke zwischen Männern und Frauen.
-#2: Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
-#3: Facebook-Nutzer die die Plattform ausschließlich als Informationsquelle nutzen, sind nicht politisch aktiver, als die Facebook-Nutzer, die diese ausschließlich zur Unterhaltung und Kontaktpflege nutzen.
+1: Es gibt einen Unterschied in der Nutzungshäufigkeit sozialer Netzwerke zwischen Männern und Frauen.
+2: Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
+3: Facebook-Nutzer die die Plattform ausschließlich als Informationsquelle nutzen, sind nicht politisch aktiver, als die Facebook-Nutzer, die diese ausschließlich zur Unterhaltung und Kontaktpflege nutzen.
 
 
 ## Zusammenhangsshypothesen überarbeitet
