@@ -28,7 +28,7 @@ source("surveymonkey.R")
 
 # Datei laden ----
 
-filename <- "data/Digitale_Muendigkeit.csv"
+filename <- "data/DigitaleMuendigkeit_all.csv"
 raw <- load_surveymonkey_csv(filename)
 
 raw.short <- raw[,c(-1:-9,-13,-15:-118,-137)]
@@ -121,7 +121,7 @@ data <- data %>%
   select(-starts_with("fbpolitik", ignore.case = F)) %>%
   select(-starts_with("fbmeinung", ignore.case = F)) %>%
   select(-starts_with("fbaktiv", ignore.case = F))
-saveRDS(data, "data/Digitale_Muendigkeit.rds")
+saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 
 
 #### Unterschiedsshypothesen
