@@ -78,13 +78,18 @@ Die Formulierung mit "Welche" ist auch ein bisschen irreführend.
 
 ## Unterschiedsshypothesen überarbeitet
 1: Es gibt einen Unterschied in der Nutzungshäufigkeit sozialer Netzwerke zwischen Männern und Frauen.
+
 2: Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
+
 3: Facebook-Nutzer die die Plattform ausschließlich als Informationsquelle nutzen, sind nicht politisch aktiver, als die Facebook-Nutzer, die diese ausschließlich zur Unterhaltung und Kontaktpflege nutzen.
 
 
 ## Zusammenhangsshypothesen überarbeitet
-1: Ob man sich in seiner politischen Meinung beeinflusst fühlt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
+1: Ob man sich in seiner politischen Meinung beeinflusst fühlt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten 
+folgt.
+
 2: User, die auf Facebook einer politischen Partei/ einem Politiker folgen, veröffentlichen ihre politische Meinung auf der Plattform.
+
 3: User, die auf Facebook politisches Geschehen verfolgen, lassen sich eher in ihrer politischen Meinung beeinflussen. 
 
 
