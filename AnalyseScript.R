@@ -128,7 +128,7 @@ saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 1: Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
 2:Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, 
 als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
-2:Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, 
+3:Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, 
 als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
   
 #### Zusammenhangsshypothesen
@@ -139,3 +139,25 @@ als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
 df <- hcictools::robot_care 
 jmv::linReg(df, dep = c("robo_bed"), covs = c("kut"), blocks = list("kut"), 
             r2Adj = T, stdEst = T, anova=T)  
+
+
+## FEEDBACK: Da Sie in den meisten Fällen keinen Code zu der Hypothese geschrieben haben, kann ich Ihnen leider kein Feedback zum Code geben. 
+# Tipp: Solche Aufzählungen immer auskommentieren, sonst weiß R damit nichts anzufangen.
+# Unterschiedshypothese 1 ist unglücklich formuliert. Es geht um den Unterschied IN der Nutzungshäufigkeit.
+# In Unterschiedshypothese 3 wirkt der Unterschied zwischen den Gruppen etwas willkürlich und nicht sehr trennscharf.
+# Zusammenhangshypothesen:
+# ad 1: Hier geht etwas unter, dass sie die Beeinflussbarkeit nicht messen können. Sie messen die selbst empfundene Beinflussbarkeit.
+# ad 2 und 3: Hier ist ein richtig fetter Fehler drin: Geschlecht ist keine ordinale Variable, d.h. wenn überhaupt können Sie das mit Unterschiedshypothesen überprüfen.
+# Die Formulierung mit "Welche" ist auch ein bisschen irreführend.
+
+
+#### Unterschiedsshypothesen überarbeitet
+#1: Es gibt einen Unterschied in der Nutzungshäufigkeit sozialer Netzwerke zwischen Männern und Frauen.
+#2: Facebook-Nutzer, die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
+#3: Facebook-Nutzer, die die Plattform ausschließlich als Informationsquelle nutzen, sind nicht politisch aktiver, als die Facebook-Nutzer, die diese ausschließlich zur Unterhaltung und Kontaktpflege nutzen.
+
+
+#### Zusammenhangsshypothesen überarbeitet
+#1: Ob man sich in seiner politischen Meinung beeinflusst fühlt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
+#2: User, die auf Facebook einer politischen Partei/ einem Politiker folgen, veröffentlichen ihre politische Meinung auf der Plattform.
+#3. User, die auf Facebook politisches Geschehen verfolgen, lassen sich eher in ihrer politischen Meinung beeinflussen. 
