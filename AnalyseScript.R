@@ -31,7 +31,9 @@ source("surveymonkey.R")
 filename <- "data/DigitaleMuendigkeit_all.csv"
 raw <- load_surveymonkey_csv(filename)
 
-raw.short <- raw[,c(-1:-9,-13,-15:-118,-137)]
+#Datacleaning
+
+raw.short <- raw[c(-544:-554),c(-1:-9,-13,-15:-118,-137)]
 
 names( raw.short ) %>% View()
 
@@ -123,22 +125,21 @@ data <- data %>%
   select(-starts_with("fbaktiv", ignore.case = F))
 saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 
-
 #### Unterschiedsshypothesen
-1: Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
-2:Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, 
-als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
-3:Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, 
-als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
+#1: Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
+#2:Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, 
+#als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
+#3:Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, 
+#als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
   
 #### Zusammenhangsshypothesen
-1: Ob man sich in seiner politischen Meinung beeinflussen lässt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
-2: Welche User eher Politikern auf Facebook folgen, ist abhängig vom Geschlecht.
-3. Welche User eher politische motivierte Beiträge auf Facebook kommentieren, ist abhängig vom Geschlecht.
+#1: Ob man sich in seiner politischen Meinung beeinflussen lässt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
+#2: Welche User eher Politikern auf Facebook folgen, ist abhängig vom Geschlecht.
+#3. Welche User eher politische motivierte Beiträge auf Facebook kommentieren, ist abhängig vom Geschlecht.
 
-df <- hcictools::robot_care 
-jmv::linReg(df, dep = c("robo_bed"), covs = c("kut"), blocks = list("kut"), 
-            r2Adj = T, stdEst = T, anova=T)  
+#df <- hcictools::robot_care 
+#jmv::linReg(df, dep = c("robo_bed"), covs = c("kut"), blocks = list("kut"), 
+#            r2Adj = T, stdEst = T, anova=T)  
 
 
 ## FEEDBACK: Da Sie in den meisten Fällen keinen Code zu der Hypothese geschrieben haben, kann ich Ihnen leider kein Feedback zum Code geben. 
@@ -161,3 +162,5 @@ jmv::linReg(df, dep = c("robo_bed"), covs = c("kut"), blocks = list("kut"),
 #1: Ob man sich in seiner politischen Meinung beeinflusst fühlt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
 #2: User, die auf Facebook einer politischen Partei/ einem Politiker folgen, veröffentlichen ihre politische Meinung auf der Plattform.
 #3. User, die auf Facebook politisches Geschehen verfolgen, lassen sich eher in ihrer politischen Meinung beeinflussen. 
+
+raw.short <- raw(-544)
