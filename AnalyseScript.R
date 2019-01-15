@@ -31,7 +31,7 @@ source("surveymonkey.R")
 filename <- "data/DigitaleMuendigkeit_all.csv"
 raw <- load_surveymonkey_csv(filename)
 
-#Datacleaning
+#Dummydatensätze gelöscht
 
 raw.short <- raw[c(-544:-554),c(-1:-9,-13,-15:-118,-137)]
 
