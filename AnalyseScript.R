@@ -122,7 +122,8 @@ schluesselliste <- list(FBPOLITIK = c("politischinformiert", "politikreaktion", 
                         FBMEINUNG = c("fbpolitischethemen", "politischemeinungposts3", "politischemeinungposts2", "politischemeinungposts1"),
                         FBAKTIV = c("fbaktivpassiv"),
                         FOLLOWPOLITIK = c("followpolitik1", "followpolitik2"),
-                        POSTSPOLTIK = c("postspolitik1", "-postspolitik2"))
+                        POSTSPOLTIK = c("postspolitik1", "-postspolitik2"),
+                        FBNUTZEN = c("fbnutzen"))
 
 scores <- scoreItems(schluesselliste, raw.short, min = 1, max = 6, missing = TRUE)
 
@@ -139,7 +140,12 @@ saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 
 # T-Test
 
-t.test(filter(data, data$gender == "männlich")$fb, filter(data, data$gender == "weiblich")$FBMEINUNG)
+t.test(filter(data, data$gender == "männlich")$FBNUTZEN, filter(data, data$gender == "weiblich")$FBNUTZEN)
+### Kleiner Hinweis noch: Wenn Sie einen T-Test mit einem einzelnen Item als AV rechnen möchten ist der T-Test eigentlich der falsche Test.
+### Der richtige Test heißt U-Test und wird genau so interpretiert wie der T-Test: Nullhypothese verwerfen, wenn p unter dem Signifikanzniveau liegt.
+### Der U-Test geht so:
+wilcox.test(filter(data, data$gender == "männlich")$FBNUTZEN, filter(data, data$gender == "weiblich")$FBNUTZEN)
+
 
 #2:Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, 
 #als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
