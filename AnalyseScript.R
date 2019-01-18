@@ -1,15 +1,15 @@
 ### AnalyseScript.R
 
-install.packages("tidyverse")
-install.packages("lubridate")
-install.packages("psych")
-install.packages("esquisse")
-install.packages("ggthemes")
-install.packages("ggplot2")
+#install.packages("tidyverse")
+#install.packages("lubridate")
+#install.packages("psych")
+#install.packages("esquisse")
+#install.packages("ggthemes")
+#install.packages("ggplot2")
 
-install.packages("devtools")
-library(devtools)
-devtools::install_github("HCIC/r-tools")
+# install.packages("devtools")
+# library(devtools)
+# devtools::install_github("HCIC/r-tools")
 
 source("surveymonkey.R")
 
@@ -122,7 +122,7 @@ schluesselliste <- list(FBPOLITIK = c("politischinformiert", "politikreaktion", 
                         FBMEINUNG = c("fbpolitischethemen", "politischemeinungposts3", "politischemeinungposts2", "politischemeinungposts1"),
                         FBAKTIV = c("fbaktivpassiv"),
                         FOLLOWPOLITIK = c("followpolitik1", "followpolitik2"),
-                        POSTSPOLTIK = c("postspolitik1", "-postspotitik2"))
+                        POSTSPOLTIK = c("postspolitik1", "-postspolitik2"))
 
 scores <- scoreItems(schluesselliste, raw.short, min = 1, max = 6, missing = TRUE)
 
