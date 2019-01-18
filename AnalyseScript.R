@@ -1,17 +1,4 @@
-# Analyse Script
-print("Hier werden Pakete eingebunden")
-
-# Data Cleaning ----
-print("Hier wird der Datensatz aufbereitet. Thema am 09.11.2018")
-
-# Skalenberechnung ----
-print("Hier werden später Skalen berechnet. Thema am 09.11.2018")
-
-# Analyse ----
-print("Hier werden später statistische Analysen durchgeführt. Thema ab dem 16.11.2018")
-
-# Graphik erstellung ---- 
-print("Hier werden später Grafiken erstellt. Thema ab dem 16.11.2018")
+### AnalyseScript.R
 
 install.packages("tidyverse")
 install.packages("lubridate")
@@ -31,11 +18,11 @@ source("surveymonkey.R")
 filename <- "data/DigitaleMuendigkeit_all.csv"
 raw <- load_surveymonkey_csv(filename)
 
-#Dummydatensätze gelöscht
+#Dummydatensätze und nicht relevante Variablen löschen:
 
 raw.short <- raw[c(-544:-554),c(-1:-9,-13,-15:-118,-137)]
 
-names( raw.short ) %>% View()
+# Variablen umbenennen:
 
 names(raw.short)[1] <- "age"
 names(raw.short)[2] <- "gender"
@@ -60,47 +47,19 @@ names(raw.short)[20] <- "politischemeinungposts2"
 names(raw.short)[21] <- "politischemeinungposts3"
 names(raw.short)[22] <- "fbpolitischethemen"
 
-skala.zustimmung <- c("Trifft gar nicht zu",
-                      "Trifft nicht zu",
-                      "Trifft eher nicht zu",
-                      "Trifft eher zu",
-                      "Trifft zu",
-                      "Trifft voll zu")
+# Variablen das richtige Skalenniveau zuordnen:
 
 raw.short$gender <- factor(raw.short$gender)
-raw.short$fbpolitischethemen <- ordered(raw.short$fbpolitischethemen, 
-                                        levels = c("Trifft gar nicht zu",
-                                                   "Trifft nicht zu",
-                                                   "Trifft eher nicht zu",
-                                                   "Trifft eher zu",
-                                                   "Trifft zu",
-                                                   "Trifft voll zu"))
+raw.short$education <- factor(raw.short$education)
+raw.short$profession <- factor(raw.short$profession)
 
-raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
-raw.short$politischemeinungposts2 <- ordered(raw.short$politischemeinungposts2, levels = skala.zustimmung)
-raw.short$politischemeinungposts1 <- ordered(raw.short$politischemeinungposts1, levels = skala.zustimmung)
-raw.short$politischinformiert <- ordered(raw.short$politischinformiert, levels = skala.zustimmung)
-raw.short$politikreaktion <- ordered(raw.short$politikreaktion, levels = skala.zustimmung)
-raw.short$politischemeinung <- ordered(raw.short$politischemeinung, levels = skala.zustimmung)
-raw.short$politischeinhalte <- ordered(raw.short$politischeinhalte, levels = skala.zustimmung)
-raw.short$comments <- ordered(raw.short$comments, levels = skala.zustimmung)
-raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
-raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
-raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
-raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
-raw.short$postspolitik2
-raw.short$postspolitik1
-raw.short$followpolitik2
-raw.short$followpolitik1
-raw.short$fbwofuer
-raw.short$fbinteresse
-raw.short$fbinteraktion
-raw.short$fbaktivpassiv
-raw.short$fbnutzen
-raw.short$profession
-raw.short$education
-raw.short$gender
-raw.short$age
+raw.short$fbnutzen <- ordered(raw.short$fbnutzen, levels = c("gar nicht",
+                                                             "monatlich",
+                                                             "mehrmals monatlich",
+                                                             "wöchentlich",
+                                                             "mehrmals wöchentlich",
+                                                             "täglich",
+                                                             "mehrmals täglich"))
 
 raw.short$fbaktivpassiv <- ordered(raw.short$fbaktivpassiv, 
                                    levels = c("stimme gar nicht zu",
@@ -109,26 +68,79 @@ raw.short$fbaktivpassiv <- ordered(raw.short$fbaktivpassiv,
                                               "stimme eher zu",
                                               "stimme zu",
                                               "stimme voll zu"))
-raw.short
+
+raw.short$fbinteraktion <- factor(raw.short$fbinteraktion)
+raw.short$fbinteresse <- factor(raw.short$fbinteresse)
+raw.short$fbwofuer <- factor(raw.short$fbwofuer)
+
+#### TODO: Wie sehen die Skalen aus?
+
+raw.short$followpolitik1 <- ordered(raw.short$followpolitik1, 
+                                    levels =c("",
+                                              "",
+                                              "usw."))
+
+
+raw.short$followpolitik2 <- ordered(raw.short$followpolitik2, 
+                                    levels =c("",
+                                              "",
+                                              "usw."))
+
+raw.short$postspolitik1 <- ordered(raw.short$postspolitik1, 
+                                   levels =c("",
+                                             "",
+                                             "usw."))
+
+raw.short$postspolitik2 <- ordered(raw.short$postspolitik2, 
+                                   levels =c("",
+                                             "",
+                                             "usw."))
+
+skala.zustimmung <- c("Trifft gar nicht zu",
+                      "Trifft nicht zu",
+                      "Trifft eher nicht zu",
+                      "Trifft eher zu",
+                      "Trifft zu",
+                      "Trifft voll zu")
+
+raw.short$comments <- ordered(raw.short$comments, levels = skala.zustimmung)
+raw.short$politischeinhalte <- ordered(raw.short$politischeinhalte, levels = skala.zustimmung)
+raw.short$politischemeinung <- ordered(raw.short$politischemeinung, levels = skala.zustimmung)
+raw.short$politikreaktion <- ordered(raw.short$politikreaktion, levels = skala.zustimmung)
+raw.short$politischinformiert <- ordered(raw.short$politischinformiert, levels = skala.zustimmung)
+raw.short$politischemeinungposts1 <- ordered(raw.short$politischemeinungposts1, levels = skala.zustimmung)
+raw.short$politischemeinungposts2 <- ordered(raw.short$politischemeinungposts2, levels = skala.zustimmung)
+raw.short$politischemeinungposts3 <- ordered(raw.short$politischemeinungposts3, levels = skala.zustimmung)
+raw.short$fbpolitischethemen <- ordered(raw.short$fbpolitischethemen, levels = skala.zustimmung)
+
+
 library(psych)
-schluesselliste <- list(fbpolitik = c("politischinformiert", "politikreaktion", "politischemeinung", "politischeinhalte", "comments"),
-                        fbmeinung = c("fbpolitischethemen", "politischemeinungposts3", "politischemeinungposts2", "politischemeinungposts1"),
-                        fbaktiv = c("fbaktivpassiv"))
-scores <- scoreItems(schluesselliste, raw.short, min = 1, max = 6)
-scores$alpha
-scores$scores
+schluesselliste <- list(FBPOLITIK = c("politischinformiert", "politikreaktion", "politischemeinung", "politischeinhalte", "comments"),
+                        FBMEINUNG = c("fbpolitischethemen", "politischemeinungposts3", "politischemeinungposts2", "politischemeinungposts1"),
+                        FBAKTIV = c("fbaktivpassiv"),
+                        FOLLOWPOLITIK = c("followpolitik1", "followpolitik2"),
+                        POSTSPOLTIK = c("postspolitik1", "postspotitik2"))
+
+scores <- scoreItems(schluesselliste, raw.short, min = 1, max = 6, missing = TRUE)
+
 data <- bind_cols(raw.short, as.tibble(scores$scores))
-View(data)
+
 data <- data %>%
-  select(-starts_with("fbpolitik", ignore.case = F)) %>%
-  select(-starts_with("fbmeinung", ignore.case = F)) %>%
-  select(-starts_with("fbaktiv", ignore.case = F))
+  select(-starts_with("politi", ignore.case = F)) %>%
+  select(-starts_with("comments", ignore.case = F))
+
 saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 
 #### Unterschiedsshypothesen
 #1: Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
+
+# T-Test
+
+t.test(filter(data, data$gender == "männlich")$fb, filter(data, data$gender == "weiblich")$FBMEINUNG)
+
 #2:Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, 
 #als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
+
 #3:Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, 
 #als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
   
@@ -138,7 +150,7 @@ saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 #3. Welche User eher politische motivierte Beiträge auf Facebook kommentieren, ist abhängig vom Geschlecht.
 
 #df <- hcictools::robot_care 
-#jmv::linReg(df, dep = c("robo_bed"), covs = c("kut"), blocks = list("kut"), 
+#jmv::linReg(data, dep = c("FBNUTZEN"), covs = c("kut"), blocks = list("kut"), 
 #            r2Adj = T, stdEst = T, anova=T)  
 
 
@@ -154,6 +166,9 @@ saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 
 #### Unterschiedsshypothesen überarbeitet
 #1: Es gibt einen Unterschied in der Nutzungshäufigkeit sozialer Netzwerke zwischen Männern und Frauen.
+
+
+
 #2: Facebook-Nutzer, die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
 #3: Facebook-Nutzer, die die Plattform ausschließlich als Informationsquelle nutzen, sind nicht politisch aktiver, als die Facebook-Nutzer, die diese ausschließlich zur Unterhaltung und Kontaktpflege nutzen.
 
@@ -162,5 +177,3 @@ saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 #1: Ob man sich in seiner politischen Meinung beeinflusst fühlt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
 #2: User, die auf Facebook einer politischen Partei/ einem Politiker folgen, veröffentlichen ihre politische Meinung auf der Plattform.
 #3. User, die auf Facebook politisches Geschehen verfolgen, lassen sich eher in ihrer politischen Meinung beeinflussen. 
-
-raw.short <- raw(-544)
