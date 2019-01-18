@@ -76,25 +76,28 @@ raw.short$fbwofuer <- factor(raw.short$fbwofuer)
 #### TODO: Wie sehen die Skalen aus?
 
 raw.short$followpolitik1 <- ordered(raw.short$followpolitik1, 
-                                    levels =c("",
-                                              "",
-                                              "usw."))
+                                    levels =c("...keiner politischen Partei.",
+                                              "...einer politischen Partei.",
+                                              "...mehreren politischen Parteien."))
 
 
 raw.short$followpolitik2 <- ordered(raw.short$followpolitik2, 
-                                    levels =c("",
-                                              "",
-                                              "usw."))
+                                    levels =c("...keinen Politikern.",
+                                              "...einem Politiker/ einer Politikerin.",
+                                              "...mehreren Politikern."
+                                              ))
 
 raw.short$postspolitik1 <- ordered(raw.short$postspolitik1, 
-                                   levels =c("",
-                                             "",
-                                             "usw."))
+                                   levels =c("...gar nicht",
+                                             "...indem ich sie bewerte (\"Like\", \"Love\", \"Haha\", \"Wow\", \"Traurig\", \"Wütend\").",
+                                             "...indem ich sie kommentiere.",
+                                             "...indem ich sie teile."))
 
 raw.short$postspolitik2 <- ordered(raw.short$postspolitik2, 
-                                   levels =c("",
-                                             "",
-                                             "usw."))
+                                   levels =c("...gar nicht",
+                                             "...indem ich sie bewerte (\"Like\", \"Love\", \"Haha\", \"Wow\", \"Traurig\", \"Wütend\").",
+                                             "...indem ich sie kommentiere.",
+                                             "...indem ich sie teile."))
 
 skala.zustimmung <- c("Trifft gar nicht zu",
                       "Trifft nicht zu",
@@ -119,7 +122,7 @@ schluesselliste <- list(FBPOLITIK = c("politischinformiert", "politikreaktion", 
                         FBMEINUNG = c("fbpolitischethemen", "politischemeinungposts3", "politischemeinungposts2", "politischemeinungposts1"),
                         FBAKTIV = c("fbaktivpassiv"),
                         FOLLOWPOLITIK = c("followpolitik1", "followpolitik2"),
-                        POSTSPOLTIK = c("postspolitik1", "postspotitik2"))
+                        POSTSPOLTIK = c("postspolitik1", "-postspotitik2"))
 
 scores <- scoreItems(schluesselliste, raw.short, min = 1, max = 6, missing = TRUE)
 
