@@ -125,6 +125,9 @@ data <- data %>%
   select(-starts_with("fbaktiv", ignore.case = F))
 saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 
+
+
+
 #### Unterschiedsshypothesen
 #1: Es gibt einen Unterschied zwischen der Nutzungshäufigkeit sozialer Netzwerke von Männern und Frauen.
 #2:Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, 
@@ -163,4 +166,4 @@ saveRDS(data, "data/DigitaleMuendigkeit_all.rds")
 #2: User, die auf Facebook einer politischen Partei/ einem Politiker folgen, veröffentlichen ihre politische Meinung auf der Plattform.
 #3. User, die auf Facebook politisches Geschehen verfolgen, lassen sich eher in ihrer politischen Meinung beeinflussen. 
 
-raw.short <- raw(-544)
+
