@@ -1,15 +1,15 @@
 ### AnalyseScript.R
 
-#install.packages("tidyverse")
-#install.packages("lubridate")
-#install.packages("psych")
-#install.packages("esquisse")
-#install.packages("ggthemes")
-#install.packages("ggplot2")
+install.packages("tidyverse")
+install.packages("lubridate")
+install.packages("psych")
+install.packages("esquisse")
+install.packages("ggthemes")
+install.packages("ggplot2")
 
-# install.packages("devtools")
-# library(devtools)
-# devtools::install_github("HCIC/r-tools")
+ install.packages("devtools")
+ library(devtools)
+ devtools::install_github("HCIC/r-tools")
 
 source("surveymonkey.R")
 
@@ -124,6 +124,7 @@ schluesselliste <- list(FBPOLITIK = c("politischinformiert", "politikreaktion", 
                         FOLLOWPOLITIK = c("followpolitik1", "followpolitik2"),
                         POSTSPOLTIK = c("postspolitik1", "-postspolitik2"),
                         FBNUTZEN = c("fbnutzen"))
+              
 
 scores <- scoreItems(schluesselliste, raw.short, min = 1, max = 6, missing = TRUE)
 
@@ -153,6 +154,17 @@ wilcox.test(filter(data, data$gender == "männlich")$FBNUTZEN, filter(data, data
 #2:Facebook-Nutzer die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, 
 #als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
 
+
+wilcox.test(filter(data, data$followpolitik1 == "...keiner politischen Partei.")$POLITISCHEINHALTE, filter(data, data$followpolitik1 == "...einer politischen Partei.")$POLITISCHEINHALTE), filter(data, data$followpolitik1 == "...mehreren Politikern.")$POLITISCHEINHALTE
+
+wilcox.test(filter(data, data$followpolitik1), filter(data, data$politischeinhalte))
+
+
+
+data <- transform(data, FOLLOWPOLITIK_group=cut(data$FOLLOPOLITIK, breaks=c(-POLITISCHEINHALTE,median(data$FOLLOWPOLITIK, POLITISCHEINHALTE), labels=c("low", "high"))))
+
+mancova(data, deps= c(FOLLOWPOLITIK , POLITISCHEINHALTE))
+
 #3:Facebook-Nutzer die die Plattform hauptsächlich als Informationsquelle nutzen, sind nicht politisch aktiver, 
 #als die Facebook-Nutzer, die diese zur Unterhaltung und Kontaktpflege nutzen.
   
@@ -179,7 +191,7 @@ wilcox.test(filter(data, data$gender == "männlich")$FBNUTZEN, filter(data, data
 #### Unterschiedsshypothesen überarbeitet
 #1: Es gibt einen Unterschied in der Nutzungshäufigkeit sozialer Netzwerke zwischen Männern und Frauen.
 
-
+#
 
 #2: Facebook-Nutzer, die politisch motivierten Seiten folgen, sind in ihrer Meinung unbeeinflussbarer, als die Facebook-Nutzer, die keinen politisch motivierten Seiten folgen.
 #3: Facebook-Nutzer, die die Plattform ausschließlich als Informationsquelle nutzen, sind nicht politisch aktiver, als die Facebook-Nutzer, die diese ausschließlich zur Unterhaltung und Kontaktpflege nutzen.
@@ -187,8 +199,26 @@ wilcox.test(filter(data, data$gender == "männlich")$FBNUTZEN, filter(data, data
 
 #### Zusammenhangsshypothesen überarbeitet
 #1: Ob man sich in seiner politischen Meinung beeinflusst fühlt, hängt davon ab, ob man auf Facebook politisch motivierten Seiten folgt.
+data%>%select(FBMEINUNG, FBPOLITIK)
+jmv::linReg(data=data, dep=FBMEINUNG, covs=c("FBPOLITIK"), 
+            block=list(list("FBPOLITIK")),
+            r2Adj=T, stdEst=T, anova=T)
+
 #2: User, die auf Facebook einer politischen Partei/ einem Politiker folgen, veröffentlichen ihre politische Meinung auf der Plattform.
+data%>%select(FOLLOWPOLITIK, FBPOLITIK)
+jmv::linReg(data=data, dep=FBPOLITIK, covs=c("FOLLOWPOLITIK"), 
+            block=list(list("FOLLOWPOLITIK")),
+            r2Adj=T, stdEst=T, anova=T)
+
 #3. User, die auf Facebook politisches Geschehen verfolgen, lassen sich eher in ihrer politischen Meinung beeinflussen. 
+data%>%select(FBPOLITIK, FBMEINUNG)
+jmv::linReg(data=data, dep=FBMEINUNG, covs=c("FBPOLITIK"), 
+            block=list(list("FBPOLITIK")),
+            r2Adj=T, stdEst=T, anova=T)
+
+
+
+
 <<<<<<< HEAD
 
 
