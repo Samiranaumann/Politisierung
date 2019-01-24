@@ -102,7 +102,7 @@ folgt.
 1. Facebook-Nutzungshäufigkeit zwischen Männern und Frauen
 Der U-Test ergab einen p-Wert von 0.08008 und stellt somit kein signifikantes Ergebnis dar. Das bedeutet, dass es keinen Unterschied in der Facebook-Nutzungshäufigkeit zwischen den Geschlechtern gibt. Somit kann die Alternativhypothese zu Gunsten der Nullhypothese verworfen werden.
 
-## Zusammenhangshypothesen:
+## Zusammenhangshypothesen
 1. Beeinflussung der politischen Meinung
 Die lineare Regression ergab einen P-Wert von 0.001 und zeigt somit ein signifikantes Ergebnis. Das bedeutet, dass es einen Zusammenhang zwischen der Beeinflussung der polit. Meinung und dem Folgen polit. motivierten Seiten gibt und die H1 angenommen wird.
 
